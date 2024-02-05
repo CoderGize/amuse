@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\SocialController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +17,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+
+Route::prefix('/admin')->middleware('auth')->group(function ()
+{
+    Route::get('/', [CmsController::class, 'dash']);
+
+    // {{ User }}
+    Route::get('/show_user', [UserController::class, 'show_user']);
+    Route::get('/update_user/{id}', [UserController::class, 'update_user']);
+    Route::post('/update_user_confirm/{id}', [UserController::class, 'update_user_confirm']);
+    Route::get('/delete_user/{id}', [UserController::class, 'delete_user']);
+
+    // {{ Social }}
+    Route::get('/show_social',[SocialController::class,'show_social']);
+    Route::post('/update_social_confirm/{id}',[SocialController::class,'update_social_confirm']);
+    Route::get('/update_social/{id}',[SocialController::class,'update_social']);
+
+     // {{ About }}
+     Route::get('/show_about',[AboutController::class,'show_about']);
+     Route::post('/update_about/{id}',[AboutController::class,'update_about']);
+
 });
+
+Route::redirect('/', '/login');
 
 Route::middleware([
     'auth:sanctum',
