@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\CounterController;
+use App\Http\Controllers\Admin\LandingController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -55,6 +57,16 @@ Route::prefix('/admin')->middleware('auth')->group(function ()
     Route::post('/add_testimonial',[TestimonialController::class,'add_testimonial']);
     Route::post('update_testimonial/{id}',[TestimonialController::class,'update_testimonial']);
     Route::get('/delete_testimonial/{id}', [TestimonialController::class, 'delete_testimonial']);
+
+    // {{ Landing }}
+    Route::get('/show_landing',[LandingController::class,'show_landing']);
+    Route::get('/update_landing/{id}',[LandingController::class,'update_landing']);
+    Route::post('/update_landing_confirm/{id}',[LandingController::class,'update_landing_confirm']);
+
+       // {{ Counter }}
+    Route::get('/show_counter',[CounterController::class,'show_counter']);
+    Route::post('/update_counter/{id}',[CounterController::class,'update_counter']);
+
 
 });
 
