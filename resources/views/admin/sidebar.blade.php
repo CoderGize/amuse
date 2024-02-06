@@ -76,14 +76,26 @@
 
 
             <li class="nav-item">
-                <a class="nav-link rounded-3 {{ 'admin/show_blog' == request()->path() ? 'main-color' : '' }}"
-                    href="{{ url('/admin/show_blog') }}">
+                <a class="nav-link rounded-3 {{ 'admin/show_wedding' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_wedding') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="bi bi-card-text text-secondary-emphasis text-sm opacity-10"></i>
+                        <i class="bi bi-postcard-heart text-danger text-sm opacity-10"></i>
 
                     </div>
-                    <span class="nav-link-text ms-1">Blog</span>
+                    <span class="nav-link-text ms-1">Wedding</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_club' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_club') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-boombox text-warning text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Club</span>
                 </a>
             </li>
 
@@ -112,7 +124,7 @@
                     <span class="nav-link-text ms-1">Partners</span>
                 </a>
             </li>
-
+{{--
             <li class="nav-item">
                 <a class="nav-link rounded-3 {{ 'admin/show_portfolio' == request()->path() ? 'main-color' : '' }}"
                     href="{{ url('/admin/show_portfolio') }}">
@@ -122,7 +134,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Portfolio</span>
                 </a>
-            </li>
+            </li> --}}
 
 
 

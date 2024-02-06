@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\ClubController;
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\LandingController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\WeddingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,9 +65,21 @@ Route::prefix('/admin')->middleware('auth')->group(function ()
     Route::get('/update_landing/{id}',[LandingController::class,'update_landing']);
     Route::post('/update_landing_confirm/{id}',[LandingController::class,'update_landing_confirm']);
 
-       // {{ Counter }}
+    // {{ Counter }}
     Route::get('/show_counter',[CounterController::class,'show_counter']);
     Route::post('/update_counter/{id}',[CounterController::class,'update_counter']);
+
+    // {{ Wedding }}
+    Route::get('/show_wedding',[WeddingController::class,'show_wedding']);
+    Route::post('/add_wedding',[WeddingController::class,'add_wedding']);
+    Route::post('/update_wedding/{id}',[WeddingController::class,'update_wedding']);
+    Route::get('/delete_wedding/{id}',[WeddingController::class,'delete_wedding']);
+
+     // {{ Club }}
+     Route::get('/show_club',[ClubController::class,'show_club']);
+     Route::post('/add_club',[ClubController::class,'add_club']);
+     Route::post('/update_club/{id}',[ClubController::class,'update_club']);
+     Route::get('/delete_club/{id}',[ClubController::class,'delete_club']);
 
 
 });
