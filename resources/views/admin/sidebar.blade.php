@@ -100,6 +100,66 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_interactive' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_interactive') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-card-text text-success text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Interactive</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_special' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_special') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-box-seam-fill text-primary text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Special</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_musical' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_musical') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-box-seam-fill text-primary text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Musical</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_kid' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_kid') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-box-seam-fill text-primary text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Kid</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_occasion' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_occasion') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-box-seam-fill text-primary text-sm opacity-10"></i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Occasion</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link rounded-3 {{ 'admin/show_testimonial' == request()->path() ? 'main-color' : '' }}"
                     href="{{ url('/admin/show_testimonial') }}">
                     <div

@@ -17,14 +17,14 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h6>Club</h6>
+                            <h6>Special</h6>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
 
-                                    @include('admin.club.add_club')
+                                    @include('admin.special.add_special')
 
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                         <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 
-                                       Club URL
+                                       Special URL
                                     </th> <th
                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
 
@@ -69,10 +69,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($club as $data)
+                                        @forelse ($special as $data)
                                             <tr class="text-center">
                                                 <td >
-                                                        <img src="/club/{{ $data->img }}" async class="d-block m-auto" width="50px" alt="">
+                                                        <img src="/special/{{ $data->img }}" async class="d-block m-auto" width="50px" alt="">
 
                                                 </td>
 
@@ -98,14 +98,14 @@
                                                     </p>
                                                 </td>
                                                 <td class="align-middle">
-                                                  @include('admin.club.update_club')
+                                                  @include('admin.special.update_special')
                                                 </td>
 
                                                 <td class="align-middle">
-                                                    <a href="{{ url('admin/delete_club', $data->id) }}"
+                                                    <a href="{{ url('admin/delete_special', $data->id) }}"
                                                         class="text-danger font-weight-bold text-xs"
-                                                        data-toggle="tooltip" data-original-title="Edit club"
-                                                        onclick="return confirm('Are you sure you want to delete this club?')">
+                                                        data-toggle="tooltip" data-original-title="Edit special"
+                                                        onclick="return confirm('Are you sure you want to delete this special?')">
                                                         Delete
                                                         <i class="bi bi-trash"></i>
                                                     </a>
@@ -122,7 +122,7 @@
                                         @endforelse
                                     </tbody>
                                 </table>
-                                {{ $club->render('admin.pagination') }}
+                                {{ $special->render('admin.pagination') }}
                             </div>
                         </div>
                     </div>

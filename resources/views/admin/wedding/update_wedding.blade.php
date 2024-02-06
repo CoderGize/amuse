@@ -33,7 +33,7 @@
 
                             Text
                         </label>
-                        <input type="text" name="text" class="form-control" required value="{{ $data->text }}">
+                        <textarea type="text" name="text" class="form-control" required rows="4" cols="5">{{ $data->text }}</textarea>
                     </div>
 
                     <div class="mb-3">

@@ -4,9 +4,14 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ClubController;
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CounterController;
+use App\Http\Controllers\Admin\InteractiveController;
+use App\Http\Controllers\Admin\KidController;
 use App\Http\Controllers\Admin\LandingController;
+use App\Http\Controllers\Admin\MusicalController;
+use App\Http\Controllers\Admin\OccasionController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\SocialController;
+use App\Http\Controllers\Admin\SpecialController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WeddingController;
@@ -75,12 +80,41 @@ Route::prefix('/admin')->middleware('auth')->group(function ()
     Route::post('/update_wedding/{id}',[WeddingController::class,'update_wedding']);
     Route::get('/delete_wedding/{id}',[WeddingController::class,'delete_wedding']);
 
-     // {{ Club }}
-     Route::get('/show_club',[ClubController::class,'show_club']);
-     Route::post('/add_club',[ClubController::class,'add_club']);
-     Route::post('/update_club/{id}',[ClubController::class,'update_club']);
-     Route::get('/delete_club/{id}',[ClubController::class,'delete_club']);
+    // {{ Club }}
+    Route::get('/show_club',[ClubController::class,'show_club']);
+    Route::post('/add_club',[ClubController::class,'add_club']);
+    Route::post('/update_club/{id}',[ClubController::class,'update_club']);
+    Route::get('/delete_club/{id}',[ClubController::class,'delete_club']);
 
+    // {{ Interactive }}
+    Route::get('/show_interactive',[InteractiveController::class,'show_interactive']);
+    Route::post('/add_interactive',[InteractiveController::class,'add_interactive']);
+    Route::post('/update_interactive/{id}',[InteractiveController::class,'update_interactive']);
+    Route::get('/delete_interactive/{id}',[InteractiveController::class,'delete_interactive']);
+
+    // {{ Special }}
+    Route::get('/show_special',[SpecialController::class,'show_special']);
+    Route::post('/add_special',[SpecialController::class,'add_special']);
+    Route::post('/update_special/{id}',[SpecialController::class,'update_special']);
+    Route::get('/delete_special/{id}',[SpecialController::class,'delete_special']);
+
+    // {{ Musical }}
+    Route::get('/show_musical',[MusicalController::class,'show_musical']);
+    Route::post('/add_musical',[musicalController::class,'add_musical']);
+    Route::post('/update_musical/{id}',[musicalController::class,'update_musical']);
+    Route::get('/delete_musical/{id}',[musicalController::class,'delete_musical']);
+
+    // {{ Kid }}
+    Route::get('/show_kid',[KidController::class,'show_kid']);
+    Route::post('/add_kid',[kidController::class,'add_kid']);
+    Route::post('/update_kid/{id}',[kidController::class,'update_kid']);
+    Route::get('/delete_kid/{id}',[kidController::class,'delete_kid']);
+
+    // {{ occasion }}
+    Route::get('/show_occasion',[OccasionController::class,'show_occasion']);
+    Route::post('/add_occasion',[occasionController::class,'add_occasion']);
+    Route::post('/update_occasion/{id}',[occasionController::class,'update_occasion']);
+    Route::get('/delete_occasion/{id}',[occasionController::class,'delete_occasion']);
 
 });
 

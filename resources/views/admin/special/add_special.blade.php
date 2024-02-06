@@ -1,17 +1,17 @@
 <button type="button" class="btn btn-dark mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <i class="me-2 fs-6 bi bi-plus-lg"></i>
-    Add Club
+    Add Special
 </button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Club
+                <h5 class="modal-title" id="exampleModalLabel">Add Special
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('/admin/add_club') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/add_special') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="modal-body">
@@ -42,7 +42,7 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
 
-                          Club URL
+                          Special URL
                         </label>
                         <input type="text" name="url" class="form-control" required>
                     </div>

@@ -11,11 +11,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModal{{ $data->id }}Label{{ $data->id }}">
-                    Club
+                    Special
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('/admin/update_club/' . $data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/update_special/' . $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="modal-body">
@@ -39,7 +39,7 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
 
-                           Club URL
+                           Special URL
                         </label>
                         <input type="text" name="url" class="form-control" required value="{{ $data->url }}">
                     </div>
@@ -59,7 +59,7 @@
                             Image
                         </label>
                     <div>
-                        <img src="/club/{{ $data->img }}" width="100px" />
+                        <img src="/special/{{ $data->img }}" width="100px" />
                     </div>
 
                         <input type="file" name="img" class="form-control mt-3"  >

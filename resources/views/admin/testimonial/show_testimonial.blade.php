@@ -23,6 +23,9 @@
                         <div class="row mb-3">
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
+                                    <div class="mb-3 form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="toggleSwitch" name="toggleSwitch" >
+                                    </div>
 
                                     @include('admin.testimonial.add_testimonial')
 
