@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,11 @@ Route::prefix('/admin')->middleware('auth')->group(function ()
      // {{ About }}
      Route::get('/show_about',[AboutController::class,'show_about']);
      Route::post('/update_about/{id}',[AboutController::class,'update_about']);
+
+       //{{ Partner }}
+    Route::get('/show_partner', [PartnerController::class, 'show_partner']);
+    Route::post('/add_partner', [PartnerController::class, 'add_partner']);
+    Route::get('/delete_partner/{id}', [PartnerController::class, 'delete_partner']);
 
 });
 
