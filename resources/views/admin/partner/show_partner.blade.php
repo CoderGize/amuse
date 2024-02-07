@@ -21,6 +21,19 @@
                         </div>
 
                         <div class="row mb-3">
+                            <div class="col-12 d-flex justify-content-center">
+                                <form action="/admin/partner" method="POST" enctype="multipart/form-data">
+                                  @csrf
+                                  @if($show->partner_sh == 1)
+                                  <input type="hidden"  name="datash" value="0">
+                                  @endif
+                                  <div class="form-check form-switch">
+                                      <input class="form-check-input {{$show->partner_sh == 1 ? 'bg-success' : 'bg-danger' }}" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                      onchange="this.form.submit()" value="{{ $show->partner_sh == 1 ? '0' : '1' }}" name="datash" {{$show->partner_sh == 1 ? 'checked' : ''}}>
+                                      <label class="form-check-label" for="flexSwitchCheckDefault">Show Section</label>
+                                    </div>
+                                </form>
+                              </div>
                             <div class="col-12">
                                 <div class="d-flex justify-content-center">
 

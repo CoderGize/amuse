@@ -20,8 +20,8 @@
                         <label for="exampleFormControlInput1" class="form-label">
                             Video URL
                         </label>
-                        <div class="d-flex flex-column align-items">
-                            <a href="/about/{{ $about->video }}" target="_blank">{{ $about->video }}</a>
+                        <div class="d-flex flex-column align-items-center">
+                            <iframe src="{{ $about->video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             <input type="text" name="video" class="form-control mt-2" id="exampleFormControlInput1" value="{{ $about->video }}">
                         </div>
                     </div>

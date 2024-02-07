@@ -10,11 +10,13 @@ use App\Http\Controllers\Admin\LandingController;
 use App\Http\Controllers\Admin\MusicalController;
 use App\Http\Controllers\Admin\OccasionController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ShowController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\SpecialController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WeddingController;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -116,6 +118,13 @@ Route::prefix('/admin')->middleware('auth')->group(function ()
     Route::post('/update_occasion/{id}',[occasionController::class,'update_occasion']);
     Route::get('/delete_occasion/{id}',[occasionController::class,'delete_occasion']);
 
+
+    // {{ Show }}
+    Route::post('/testimonial',[ShowController::class,'testimonial']);
+    Route::post('/partner',[ShowController::class,'partner']);
+    Route::post('/counter',[ShowController::class,'counter']);
+
+
 });
 
 Route::redirect('/', '/login');
@@ -129,3 +138,29 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Api Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/api/get-about',[ApiController::class,'getAbout']);
+Route::get('/api/get-testimonial',[ApiController::class,'getTestimonial']);
+Route::get('/api/get-landing',[ApiController::class,'getLanding']);
+Route::get('/api/get-partner',[ApiController::class,'getPartner']);
+Route::get('/api/get-counter',[ApiController::class,'getCounter']);
+Route::get('/api/get-wedding',[ApiController::class,'getWedding']);
+Route::get('/api/get-club',[ApiController::class,'getClub']);
+Route::get('/api/get-interactive',[ApiController::class,'getInteractive']);
+Route::get('/api/get-special',[ApiController::class,'getSpecial']);
+Route::get('/api/get-muscial',[ApiController::class,'getMuscial']);
+Route::get('/api/get-kid',[ApiController::class,'getKid']);
+Route::get('/api/get-occasion',[ApiController::class,'getOccasion']);
+Route::get('/api/get-show',[ApiController::class,'getShow']);
+

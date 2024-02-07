@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Partner;
+use App\Models\Show;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Str;
@@ -14,8 +15,9 @@ class PartnerController extends Controller
     public function show_partner()
     {
         $partner = Partner::latest()->paginate(10);
+        $show = Show::find(1);
 
-        return view('admin.partner.show_partner', compact('partner'));
+        return view('admin.partner.show_partner', compact('partner' , 'show'));
     }
 
     public function add_partner(Request $request)

@@ -13,6 +13,7 @@ use App\Models\Special;
 use App\Models\Wedding;
 use App\Models\Occasion;
 use App\Models\Interactive;
+use App\Models\Show;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -85,7 +86,7 @@ class ApiController extends Controller
     {
         $special = Special::all();
 
-        return response()->json($speial);
+        return response()->json($special);
 
     }
 
@@ -110,6 +111,14 @@ class ApiController extends Controller
         $occasion = Occasion::all();
 
         return response()->json($occasion);
+
+    }
+
+    public function getShow()
+    {
+        $show = Show::find(1);
+
+        return response()->json($show);
 
     }
 }

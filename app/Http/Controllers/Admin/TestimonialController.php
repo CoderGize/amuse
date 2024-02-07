@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Show;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,9 @@ class TestimonialController extends Controller
     public function show_testimonial()
     {
         $testimonial = Testimonial::latest()->paginate(10);
+        $show = Show::find(1);
 
-        return view('admin.testimonial.show_testimonial' , compact('testimonial'));
+        return view('admin.testimonial.show_testimonial' , compact('testimonial' , 'show'));
     }
 
     public function add_testimonial(Request $request)
