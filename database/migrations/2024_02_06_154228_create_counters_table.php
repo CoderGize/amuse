@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('nb1');
             $table->integer('nb2');
+            $table->integer('nb3');
             $table->longText('text1');
             $table->longText('text2');
             $table->longText('text3');

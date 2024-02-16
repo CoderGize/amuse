@@ -23,6 +23,7 @@ class CounterController extends Controller
 
         $counter->nb1 = $request->nb1;
         $counter->nb2 = $request->nb2;
+        $counter->nb3 = $request->nb3;
         $counter->text1 = $request->text1;
         $counter->text2 = $request->text2;
         $counter->text3 = $request->text3;

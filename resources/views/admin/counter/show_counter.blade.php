@@ -48,7 +48,7 @@
 
 
                         <div class="row text-center my-3">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="">
                                    Number 1
                                 </label>
@@ -57,12 +57,21 @@
                                 </p>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="">
                                    Number 2
                                 </label>
                                 <p>
                                     {{ $counter->nb2 }}
+                                </p>
+                            </div>
+
+                            <div class="col-4">
+                                <label for="">
+                                   Number 3
+                                </label>
+                                <p>
+                                    {{ $counter->nb3 }}
                                 </p>
                             </div>
 

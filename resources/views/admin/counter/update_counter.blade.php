@@ -34,6 +34,14 @@
                         <input type="number" name="nb2" class="form-control" value="{{ $counter->nb2 }}" >
                     </div>
 
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+
+                           Number 3
+                        </label>
+                        <input type="number" name="nb3" class="form-control" value="{{ $counter->nb3 }}" >
+                    </div>
+
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">

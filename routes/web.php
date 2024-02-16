@@ -163,4 +163,5 @@ Route::get('/api/get-muscial',[ApiController::class,'getMuscial']);
 Route::get('/api/get-kid',[ApiController::class,'getKid']);
 Route::get('/api/get-occasion',[ApiController::class,'getOccasion']);
 Route::get('/api/get-show',[ApiController::class,'getShow']);
+Route::get('/api/get-social',[ApiController::class,'getSocial']);
 

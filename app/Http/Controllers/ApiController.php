@@ -10,6 +10,7 @@ use App\Models\Landing;
 use App\Models\Musical;
 use App\Models\Partner;
 use App\Models\Special;
+use App\Models\Social;
 use App\Models\Wedding;
 use App\Models\Occasion;
 use App\Models\Interactive;
@@ -36,9 +37,17 @@ class ApiController extends Controller
 
     public function getLanding()
     {
-        $landing = Landing::all();
+        $landing = Landing::find(1);
 
         return response()->json($landing);
+
+    }
+
+    public function getSocial()
+    {
+        $social = social::find(1);
+
+        return response()->json($social);
 
     }
 
@@ -121,4 +130,6 @@ class ApiController extends Controller
         return response()->json($show);
 
     }
+
+    
 }
